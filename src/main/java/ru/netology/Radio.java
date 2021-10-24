@@ -90,7 +90,7 @@ public class Radio {
             return;
         }
         if (newCurrentRadioVolume == getMaxVolume()) {
-            newCurrentRadioVolume = getMinVolume();
+            newCurrentRadioVolume = getMaxVolume();
         }
         else {
             newCurrentRadioVolume = newCurrentRadioVolume + 1;
@@ -106,7 +106,7 @@ public class Radio {
             return;
         }
         if (newCurrentRadioVolume == getMinVolume()) {
-            newCurrentRadioVolume = getMaxVolume();
+            newCurrentRadioVolume = getMinVolume();
         }
         else {
             newCurrentRadioVolume = newCurrentRadioVolume - 1;
