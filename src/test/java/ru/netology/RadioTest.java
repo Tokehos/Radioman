@@ -35,7 +35,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldNextStationInRange() {
+    void shouldNextStationInRange() { // Поставить следующую радиостанцию в пределах допустимых значений
         Radio Radio = new Radio();
         Radio.setNextRadioStation(5);
         int actual = Radio.getCurrentRadioStation();
@@ -44,7 +44,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldNextStationOnMinimum() {
+    void shouldNextStationOnMinimum() { // Поставить следующую радиостанцию ниже допустимой
         Radio Radio = new Radio();
 
         Radio.setNextRadioStation(-1);
@@ -54,7 +54,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldNextStationOnMaximum() {
+    void shouldNextStationOnMaximum() { // Поставить следующую радиостанцию с последней на первую
         Radio Radio = new Radio();
 
         Radio.setNextRadioStation(9);
@@ -64,7 +64,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldNextStationOverMaximum() {
+    void shouldNextStationOverMaximum() { // Поставить следующую радиостанцию выше допустимой
         Radio Radio = new Radio();
 
         Radio.setNextRadioStation(10);
@@ -75,7 +75,7 @@ class RadioTest {
 
 
     @Test
-    void shouldPrevStationInRange() {
+    void shouldPrevStationInRange() { // Поставить предыдущую радиостанцию в пределах допустимых значений
         Radio Radio = new Radio();
         Radio.setPrevRadioStation(5);
         int actual = Radio.getCurrentRadioStation();
@@ -84,7 +84,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldPrevStationOnMinimum() {
+    void shouldPrevStationOnMinimum() { // Поставить предыдущую радиостанцию ниже допустимой
         Radio Radio = new Radio();
 
         Radio.setPrevRadioStation(-1);
@@ -94,7 +94,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldPrevStationOnMaximum() {
+    void shouldPrevStationOnMaximum() { // Поставить предыдущую радиостанцию с первую на последнюю
         Radio Radio = new Radio();
 
         Radio.setPrevRadioStation(0);
@@ -104,7 +104,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldPrevStationOverMaximum() {
+    void shouldPrevStationOverMaximum() { // Поставить предыдущую радиостанцию выше допустимой
         Radio Radio = new Radio();
 
         Radio.setPrevRadioStation(10);
@@ -114,7 +114,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldCurrentRadioVolume() { // Поставить текущую радиостанцию в пределах допустимых значений
+    void shouldCurrentRadioVolume() { // Поставить текущую громкость в пределах допустимых значений
         Radio Radio = new Radio();
         Radio.setCurrentRadioVolume(7);
         int actual = Radio.getCurrentRadioVolume();
@@ -123,7 +123,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldCurrentRadioVolumeUnderMin() { // Поставить текущую радиостанцию ниже допустимой
+    void shouldCurrentRadioVolumeUnderMin() { // Поставить текущую громкость ниже допустимой
         Radio Radio = new Radio();
         Radio.setCurrentRadioVolume(-1);
         int actual = Radio.getCurrentRadioVolume();
@@ -133,7 +133,7 @@ class RadioTest {
 
 
     @Test
-    void shouldCurrentRadioVolumeOverMax() { // Поставить текущую радиостанцию выше допустимой
+    void shouldCurrentRadioVolumeOverMax() { // Поставить текущую громкость выше допустимой
         Radio Radio = new Radio();
         Radio.setCurrentRadioVolume(11);
         int actual = Radio.getCurrentRadioVolume();
@@ -142,7 +142,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldCurrentUpRadioVolume() { // Поставить текущую радиостанцию в пределах допустимых значений
+    void shouldCurrentUpRadioVolume() { // Повысить громкость в пределах допустимых значений
         Radio Radio = new Radio();
         Radio.setUpRadioVolume(7);
         int actual = Radio.getCurrentRadioVolume();
@@ -151,7 +151,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldCurrentUpRadioVolumeMaxToMin() { // Поставить текущую радиостанцию в пределах допустимых значений
+    void shouldCurrentUpRadioVolumeMaxToMin() { // Повысить громкость с максимальной на минимальную
         Radio Radio = new Radio();
         Radio.setUpRadioVolume(10);
         int actual = Radio.getCurrentRadioVolume();
@@ -160,7 +160,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldCurrentUpRadioVolumeUnderMin() { // Поставить текущую радиостанцию ниже допустимой
+    void shouldCurrentUpRadioVolumeUnderMin() { // Повысить громкость указав значение ниже максимального
         Radio Radio = new Radio();
         Radio.setUpRadioVolume(-1);
         int actual = Radio.getCurrentRadioVolume();
@@ -170,7 +170,7 @@ class RadioTest {
 
 
     @Test
-    void shouldCurrentUpRadioVolumeOverMax() { // Поставить текущую радиостанцию выше допустимой
+    void shouldCurrentUpRadioVolumeOverMax() { // Повысить громкость указав значение выше максимального
         Radio Radio = new Radio();
         Radio.setUpRadioVolume(11);
         int actual = Radio.getCurrentRadioVolume();
@@ -179,7 +179,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldCurrentDownRadioVolume() { // Поставить текущую радиостанцию в пределах допустимых значений
+    void shouldCurrentDownRadioVolume() { // Повысить громкость в пределах допустимых значений
         Radio Radio = new Radio();
         Radio.setDownRadioVolume(7);
         int actual = Radio.getCurrentRadioVolume();
@@ -188,7 +188,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldCurrentDownRadioVolumeMaxToMin() { // Поставить текущую радиостанцию в пределах допустимых значений
+    void shouldCurrentDownRadioVolumeMaxToMin() { // Понизить громкость с минимального на максимальное
         Radio Radio = new Radio();
         Radio.setDownRadioVolume(0);
         int actual = Radio.getCurrentRadioVolume();
@@ -197,7 +197,7 @@ class RadioTest {
     }
 
     @Test
-    void shouldCurrentDownRadioVolumeUnderMin() { // Поставить текущую радиостанцию ниже допустимой
+    void shouldCurrentDownRadioVolumeUnderMin() { // Понизить громкость указав значение ниже минимального
         Radio Radio = new Radio();
         Radio.setDownRadioVolume(-1);
         int actual = Radio.getCurrentRadioVolume();
@@ -207,7 +207,7 @@ class RadioTest {
 
 
     @Test
-    void shouldCurrentDownRadioVolumeOverMax() { // Поставить текущую радиостанцию выше допустимой
+    void shouldCurrentDownRadioVolumeOverMax() { // Понизить громкость указав значение выше максимального
         Radio Radio = new Radio();
         Radio.setDownRadioVolume(11);
         int actual = Radio.getCurrentRadioVolume();
